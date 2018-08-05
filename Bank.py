@@ -71,27 +71,40 @@ def atm():
 					clear()
 	# $20
 			elif fastamount == "2":
+					if balance < 20:
+					print('Insufficient funds!')
+					break
+
+				elif balance >= 20:
 					print('\nWithdrawing $20...\n')
 					print('Please take your card and cash from below.')
-					balance -= int(20)
-					print('\nYour current balance is: $' + str(balance)) 
-					sleep(5)
-					clear()
-					continue
-	# $50
-			elif fastamount == "3":
-					print('\nWithdrawing $50...\n')
-					print('Please take your card and cash from below.')
-					balance -= int(50)
+					balance = balance - int(10)
 					print('\nYour current balance is: $' + str(balance))
 					sleep(5)
 					clear()
-					continue
+	# $50
+			elif fastamount == "3":
+					if balance < 50:
+					print('Insufficient funds!')
+					break
+
+				elif balance >= 50:
+					print('\nWithdrawing $50...\n')
+					print('Please take your card and cash from below.')
+					balance = balance - int(10)
+					print('\nYour current balance is: $' + str(balance))
+					sleep(5)
+					clear()
 	# $100	
 			elif fastamount == "4":
+				if balance < 100:
+					print('Insufficient funds!')
+					break
+
+				elif balance >= 100:
 					print('\nWithdrawing $100...\n')
 					print('Please take your card and cash from below.')
-					balance -= int(100)
+					balance = balance - int(10)
 					print('\nYour current balance is: $' + str(balance))
 					sleep(5)
 					clear()
@@ -99,16 +112,18 @@ def atm():
     # Custom
 			elif fastamount == "5":
 				customfast = input('\nPlease enter amount:\n')
-				balance -= int(customfast)
-				if balance > int(0):
+
+				if balance < customfast:
+					print('Insufficient funds!')
+					break
+
+				elif balance >= customfast:
 					print('\nWithdrawing $' + customfast + '...\n')
 					print('Please take your card and cash from below.')
+					balance -= int(customfast)
 					print('\nYour current balance is: $' + str(balance))
 					sleep(5)
 					clear()
-					continue	
-				else:
-					print('Insufficient funds!')
 # Invalid choice	
 			else:
 				print('That is an invalid input, please try again.')
