@@ -72,7 +72,7 @@ def atm():
                 elif balance >= 10:
                     print('\nWithdrawing $10...\n')
                     print('Please take your card and cash from below.')
-                    balance = balance - int(10)
+                    balance = balance - 10
                     print('\nYour current balance is: $' + str(balance))
                     sleep(5)
                     clear()
@@ -89,7 +89,7 @@ def atm():
                 elif balance >= 20:
                     print('\nWithdrawing $20...\n')
                     print('Please take your card and cash from below.')
-                    balance = balance - int(10)
+                    balance = balance - 20
                     print('\nYour current balance is: $' + str(balance))
                     sleep(5)
                     clear()
@@ -105,7 +105,7 @@ def atm():
                 elif balance >= 50:
                     print('\nWithdrawing $50...\n')
                     print('Please take your card and cash from below.')
-                    balance = balance - int(10)
+                    balance = balance - 50
                     print('\nYour current balance is: $' + str(balance))
                     sleep(5)
                     clear()
@@ -121,7 +121,7 @@ def atm():
                 elif balance >= 100:
                     print('\nWithdrawing $100...\n')
                     print('Please take your card and cash from below.')
-                    balance = balance - int(10)
+                    balance = balance - 100
                     print('\nYour current balance is: $' + str(balance))
                     sleep(5)
                     clear()
@@ -178,6 +178,7 @@ while flag == True:
 # Invalid input
     else:
         print('That is an invalid input, please try again.') 
+        sleep(1)
         clear()
         continue
 # Exit message
