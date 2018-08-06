@@ -154,15 +154,14 @@ atm()
 print('\nWould you like to make another transaction?\n') 
 additionalrequest = input('Y or N\n')
 # If input y or Y, restart loop
-if additionalrequest == str('Y') or str('y'):
+if additionalrequest == str('Y'):
     clear()
     atm()
 # If input n or N, break loop
-elif additionalrequest == str('N') or str('n'):
+elif additionalrequest == str('N'):
     flag == False
     print('Thank you for banking with Bank of Python. Have a wonderful day!')
-    sleep(5)
-    clear()
+
 # Invalid input
 else:
     print('That is an invalid input, please try again.') 
